@@ -42,7 +42,19 @@ services:
     depends_on:
       - elasticsearch
     command: filebeat -e -strict.perms=false
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: product_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
 
 volumes:
   grafana-storage:
   esdata:
+  pgdata:

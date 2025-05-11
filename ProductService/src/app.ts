@@ -7,6 +7,7 @@ import {
   register,
 } from "./utils/metrics";
 import { requestLogger } from "./middlewares/requestLogger";
+import productRouter from "./routes/product.routes";
 
 const app = express();
 
@@ -37,6 +38,8 @@ app.use((req, res, next) => {
   });
   next();
 });
+
+app.use("/product", productRouter);
 
 app.get("/health", (_req, res) => {
   res.status(200).json({

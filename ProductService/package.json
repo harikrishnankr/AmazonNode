@@ -6,13 +6,18 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "start": "node dist/server.js",
+    "schemaUpdate": "npx prisma generate",
+    "migrate": "npx prisma migrate dev --name init",
     "build": "tsc -p .",
     "test": "jest"
   },
   "author": "harisemail94@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.7.0",
     "@types/node": "^22.15.17",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
@@ -24,6 +29,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.18",
-    "@types/express": "^5.0.1"
+    "@types/express": "^5.0.1",
+    "prisma": "^6.7.0"
   }
 }
