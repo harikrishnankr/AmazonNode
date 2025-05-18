@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import logger from "../utils/logger";
-import { ENV } from "../config/env";
+import logger from "@utils/logger";
+import { ENV } from "@config/env";
 
 export const requestLogger = (
   req: Request,

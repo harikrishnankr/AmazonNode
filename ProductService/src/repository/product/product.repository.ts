@@ -1,5 +1,5 @@
-import { Product } from "../../models/product.model";
-import { prisma } from "../../utils/prisma";
+import { Product } from "@models/product.model";
+import { prisma } from "@utils/prisma";
 import { IProductRepository } from "./product.interface";
 
 export class ProductRepository implements IProductRepository {
@@ -7,5 +7,9 @@ export class ProductRepository implements IProductRepository {
     return prisma.product.create({
       data: input,
     });
+  }
+
+  getAll() {
+    return prisma.product.findMany();
   }
 }

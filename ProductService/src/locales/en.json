@@ -1,0 +1,15 @@
+{
+  "product": {
+    "create_failure": "Product creation failed",
+    "create_success": "Successfully created product",
+    "get_all_success": "All products fetched successfully",
+    "get_all_failure": "Products fetch failed"
+  },
+  "errors": {
+    "bad_request": "Bad request",
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "not_found": "Resource not found",
+    "internal": "Internal server error"
+  }
+}
